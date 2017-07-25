@@ -3,14 +3,14 @@
 body {
   margin: 0;
 }
-
+/* 
 body > * {
   padding: 10px;
   font-size: 20px;
   border: 20px solid rgba(0,0,0,0.5);
 }
 
-/* specific boxes */
+/* specific boxes 
 
 header, footer {
   background-color: blue;
@@ -28,4 +28,4 @@ header {
 footer {
 
 }
-
+*/
