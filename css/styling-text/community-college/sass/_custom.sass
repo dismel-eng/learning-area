@@ -1,0 +1,34 @@
+h1
+ font-size: 5em
+ text-align: center
+h2
+ font-size: 3em
+p
+ padding-bottom: 0.200em 
+ line-height: 1.5
+ font:
+  size: 2em
+
+ul, ol
+ margin: 0.500em 0
+ line-height: 1.5
+ font:
+  size: 1.5em
+
+section h2+p
+ text-indent: 2em
+a
+ outline: none
+ &:link, &:visited
+  color: $link-color
+ &:hover, &:active
+  cursor: pointer
+  color: $hover-color
+  text-decoration: none
+ &:active
+  color: #62db6b
+a[href*="http"]
+ padding-right: 19px
+ background: url(../icon/external-link-52.png) no-repeat 100% 0
+ background-size: 16px 16px
+ 
