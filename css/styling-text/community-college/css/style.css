@@ -74,10 +74,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
 body {
   margin: 0 auto;
   min-width: 1000px;
@@ -88,15 +84,15 @@ body {
 
 section {
   float: left;
-  width: 50%; }
+  width: 55%; }
 
 aside {
   float: left;
   width: 30%; }
 
 nav {
-  float: left;
-  width: 20%; }
+  float: right;
+  width: 15%; }
 
 footer {
   clear: both; }
@@ -112,7 +108,7 @@ header, footer {
 /* WRITE YOUR CODE BELOW HERE */
 h1, h2, h3, h4, h5, h6 {
   line-height: 2;
-  letter-spacing: 0.200em;
+  letter-spacing: 0.100em;
   font-font-family: 'ZillaSlablight';
   font-weight: 300; }
 
@@ -129,12 +125,18 @@ p {
   font-size: 2em; }
 
 ul, ol {
-  margin: 0.500em 0;
+  margin: 0.500em 0 0 2em;
   line-height: 1.5;
   font-size: 1.5em; }
 
+ul {
+  list-style: disc inside; }
+
+ol {
+  list-style: lower-alpha inside; }
+
 section h2 + p {
-  text-indent: 2em; }
+  text-indent: 1em; }
 
 a {
   outline: none; }
@@ -151,3 +153,27 @@ a[href*="http"] {
   padding-right: 19px;
   background: url(../icon/external-link-52.png) no-repeat 100% 0;
   background-size: 16px 16px; }
+
+aside p a {
+  font-size: 70%; }
+
+nav ul {
+  list-style: none; }
+
+.btn {
+  margin-bottom: 1em;
+  padding: 0.8em 0;
+  border: 1px solid #a03a3a;
+  text-align: center; }
+  .btn a {
+    text-decoration: none;
+    color: #a03a3a; }
+  .btn:hover {
+    cursor: pointer;
+    background-color: rgba(160, 58, 58, 0.7); }
+  .btn:hover a {
+    color: #fff;
+    font-weight: bold; }
+  .btn:active a {
+    color: #62db6b;
+    font-weight: bold; }

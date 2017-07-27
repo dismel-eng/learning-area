@@ -1,3 +1,9 @@
+h1, h2, h3, h4, h5, h6
+ line-height: 2
+ letter-spacing: 0.100em
+ font:
+  font-family: 'ZillaSlablight'
+  weight: 300 
 h1
  font-size: 5em
  text-align: center
@@ -10,13 +16,16 @@ p
   size: 2em
 
 ul, ol
- margin: 0.500em 0
+ margin: 0.500em 0 0 2em
  line-height: 1.5
  font:
   size: 1.5em
-
+ul
+ list-style: disc inside 
+ol
+ list-style: lower-alpha inside
 section h2+p
- text-indent: 2em
+ text-indent: 1em
 a
  outline: none
  &:link, &:visited
@@ -26,9 +35,30 @@ a
   color: $hover-color
   text-decoration: none
  &:active
-  color: #62db6b
+  color: $active-color
 a[href*="http"]
  padding-right: 19px
  background: url(../icon/external-link-52.png) no-repeat 100% 0
  background-size: 16px 16px
+aside p a
+ font-size: 70%
+nav ul
+ list-style: none 
+.btn
+ margin-bottom: 1em
+ padding: 0.8em 0
+ border: 1px solid $link-color
+ text-align: center 
+ a
+  text-decoration: none
+  color: $link-color
+ &:hover 
+  cursor: pointer
+  background-color: $btn-color-hover
+ &:hover a
+  color: #fff
+  font-weight: bold
+ &:active a
+  color: $active-color
+  font-weight: bold
  
