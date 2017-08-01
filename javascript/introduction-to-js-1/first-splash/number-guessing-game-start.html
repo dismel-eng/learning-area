@@ -21,6 +21,16 @@
         color: white;
         padding: 3px;
       }
+      .wrong{
+        background-color: red;
+      }
+      .winning{
+        background-color: green;
+      }
+      .error{
+        display: none;
+        color: red;
+      }
     </style>
   </head>
 
@@ -30,20 +40,19 @@
       <p>We have selected a random number between 1 and 100. See if you can guess it in 10 turns or fewer. We'll tell you if your guess was too high or too low.</p>
 
 <div class="form">
-  <label for="guessField">Enter a guess: </label><input type="text" id="guessField" class="guessField">
+  <label for="guessField">Enter a guess: </label>
+  <input type="text" id="guessField" class="guessField">  
   <input type="submit" value="Submit guess" class="guessSubmit">
 </div>
-
+<div class="messages">
+  <span class="error">You must enter a valid number.</span>
+</div>
 <div class="resultParas">
   <p class="guesses"></p>
   <p class="lastResult"></p>
   <p class="lowOrHi"></p>
 </div>
 
-<script>
-
-  // Your JavaScript goes here
-
-</script>
+<script src="guessing-game.js"></script>
 </body>
 </html>

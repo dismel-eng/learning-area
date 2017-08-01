@@ -83,7 +83,7 @@
     guessField.value = '';
     guessField.focus();
   }
-  guessSubmit.addeventListener('click', checkGuess);
+  
   
   function setGameOver() {
 	  guessField.disabled = true;
@@ -112,5 +112,6 @@
 	
 	  randomNumber = Math.floor(Math.random()) + 1;
   }
+  guessSubmit.addeventListener('click', checkGuess());
 </script>
 </html>
