@@ -1,8 +1,26 @@
+/* Fonts setup */
+@font-face {
+    font-family: 'fira_sansregular';
+    src: url('myfonts/firasans-regular-webfont.woff2') format('woff2'),
+         url('myfonts/firasans-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'alex_brushregular';
+    src: url('fonts/alexbrush-regular-webfont.woff2') format('woff2'),
+         url('fonts/alexbrush-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 /* General setup */
 
 html {
   font-size: 10px;
   margin: 0;
+  /*font-family: sans-serif;*/
   font-family: sans-serif;
 }
 
@@ -13,9 +31,12 @@ body {
 }
 
 /* Typography */
-
+h1, h2, h3, h4, h5, h6{
+ font-family: 'alex_brushregular';
+}
 h1 {
-  font-size: 3.2rem;
+  font-size: 4.2rem;
+  letter-spacing: 0.08em
 }
 
 h2 {
@@ -23,6 +44,7 @@ h2 {
 }
 
 p {
+  font-family: 'fira_sansregular', sans-serif;
   font-size: 1.4rem;
   line-height: 1.6;
   word-spacing: 0.6rem;
