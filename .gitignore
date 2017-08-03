@@ -22,7 +22,8 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
-
-
+### PDF ###
+*.pdf
+demos.zip
 ### Sass ###
 .sass-cache
