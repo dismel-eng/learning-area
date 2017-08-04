@@ -76,8 +76,5 @@ function Person(name, age, height, sex) {
 
 let dismel = new Person('Dismel', 32, 170, SEX.male);
 
-console.dir(dismel.idealWeight());
-
-
-
-
+console.dir(dismel);
+// Build the interfaces
