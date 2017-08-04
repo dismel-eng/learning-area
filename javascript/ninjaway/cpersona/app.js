@@ -4,15 +4,19 @@ const SEX = {
     male: 'M'
 }
 /** Person Constructor: name, age, height, sex */
-function Person(name, age, height, sex) {
-  let _name = name;
-  let _age = age;
-  let _height = height;
-  let _sex = sex;
+function Person(firt_name, last_name, age, height, sex) {
+  let _firt_name = firt_name || 'Menda';
+  let _last_name = last_name || 'Capote';
+  let _age = age || 45;
+  let _height = height || 175;
+  let _sex = sex || SEX.male;
   
   /** Get and Set Methods */
-  this.getName = function () { return _name; }
-  this.setName = function (value) { _name = value; }
+  this.getFirstName = function () { return _firt_name; }
+  this.setFirstName = function (value) { _firt_name = value; }
+
+  this.getLastName = function () { return _last_name; }
+  this.setLastName = function (value) { _last_name = value; }
 
   this.getAge = function () { return _age; }
   this.setAge = function (value) { _age = value; }
@@ -72,9 +76,10 @@ function Person(name, age, height, sex) {
 
         return Math.floor(ideal_weight) + ' Kg';
     }
+
+    /** Retur Full Name */
+    this.fullName = function () { 
+
+        return this.getFirstName() + ' ' + this.getLastName();
+    }
 }
-
-let dismel = new Person('Dismel', 32, 170, SEX.male);
-
-console.dir(dismel);
-// Build the interfaces
