@@ -21,31 +21,82 @@ function bill(type, quantity) {
 }
 
 function automatedCashier() {
-    let bills = [];
-
-    return {
-        init: function () {
-        
-            for (let i in denomination) {
+    let cashier = [];
+    
+    let init = function () { 
+        for (let i in denomination) {
                 
-                bills.push(new bill(denomination[i], 10));               
+             cashier.push(new bill(denomination[i], 10));               
 
-            }
-
-        },
-        total: function () {
-            let tmp;
-
-            bills.forEach((item, index) => {
-                tmp += item.value * item.quantity;
-            });
-
-            return tmp;
         }
     }
-    
+
+    let isEmpty = function (value) { 
+        return (typeof value  !== "undefined" && value);            
+    }
+
+    let withdraw = function(value, cashier){
+        let cash_back = 0;
+        let err = new Error();
+        let total = value;
+        let n = 0;
+        let y = 0;
+
+        try {
+            if(total > total(cashier)){
+                err.message = 'No funds available.';
+                throw  err;
+            }
+
+            if(total > (cashier[4].getValue() * cashier[4].getQuantity())){
+                //do somethign here;                
+            }else{
+                n = total / cashier[4].getValue();
+                T = total % cashier[4].getValue();
+
+                if(n > cashier[4].getQuantity())
+                    console.log('do something here');                    
+                else
+                    y = cashier[4].getQuantity() - n;
+            }
+
+           // if(cashier[4].getValue())
+                
+        } catch (error) {
+            alert(error.message);
+        }
+        if(!isNaN(parseInt(one)))
+            cash_back += cashier[0].get    
+    }
+
+    let total = function (cashier) { 
+        // Tmp variable that is going to return the total of the cashier
+
+        let tmp = 0;
+
+        for (var key in cashier) {
+            tmp += cashier[key].getValue() * cashier[key].getQuantity();  
+        }
+        
+        return tmp;
+    }
+
+    init();
+
+    return {
+        cashier: cashier,
+        total: total,
+        withdraw: withdraw
+    }
+
+            
 }
 
 let app = automatedCashier();
-app.init();
-console.dir(app.total());
+
+//console.dir(app.total(app.cashier));
+
+///console.dir(app.withdraw());
+console.log(230 % 50);
+
+// --

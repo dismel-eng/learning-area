@@ -1,4 +1,13 @@
 'use strict';
+/**
+ *  -- Falta por hacer la interfaz
+ *  -- Falta: 
+ *  Desarrolle un metodo que determine el promedio de los pesos ideales correspondientes
+    a las edades: 25, 38 y 45 a~nos si asumimos que la estatura en esos a~nos es la misma y
+    que coincide con la actual.
+ * 
+ */
+
 const SEX = {
     female: 'F',
     male: 'M'
@@ -83,3 +92,22 @@ function Person(firt_name, last_name, age, height, sex) {
         return this.getFirstName() + ' ' + this.getLastName();
     }
 }
+
+function People(){
+
+}
+
+People.prototype.name = 'no name';
+People.prototype.age = 0;
+People.prototype.city = 'no city';
+People.prototype.print = function(){
+    console.log(this.name + ', ' + this.age + ', ' + this.city);
+}
+
+var people = new People();
+people.name = 'Menda Capote';
+people.age = 40;
+people.city = 'Colon, Matanzas, Cuba.';
+
+console.dir(people);
+people.print();
