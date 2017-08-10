@@ -1,0 +1,75 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+}
+#user-form{
+    display: none;
+}
+
+.full-name{
+    display: inline-block;
+    padding: 0 1em;
+}
+
+.media-object{
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.list-group-item{
+    font-size: 1.5em;
+    letter-spacing: 2;
+}
+.list-group-item a:hover{
+    z-index: 2;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #337ab7;
+}
+
+.glyphicon-pencil:before {
+    content: "\270f";
+    color: orange;
+}
+.glyphicon-remove:before {
+    content: "\e014";
+    color: red;
+}
+
+/* CONTACTS */
+.contact-box {
+  background-color: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-box > a {
+  color: inherit;
+}
+.contact-box.center-version {
+  padding: 0;
+}
+.contact-box.center-version > a {
+  display: block;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+.contact-box.center-version > a img {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.contact-box.center-version address {
+  margin-bottom: 0;
+}
+.contact-box .contact-box-footer {
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 1px solid #e7eaec;
+  padding: 15px 20px;
+}
+a{
+    text-decoration:none !important;    
+}
