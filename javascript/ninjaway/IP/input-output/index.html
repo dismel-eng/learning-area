@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>CPerson App</title>
+    <title>Person App</title>
 
     <!-- Bootstrap -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
@@ -27,84 +27,77 @@
         </div>      
         <div class="main">
             <div class="row">
-                <div class="col-sm-4">
+                <div class="col-sm-6">
                     <div class="managment">
                         <h3>Managment</h3>
                         <a class="btn btn-default" href="#" id="add-user" role="button">Add</a>
                         <hr>
                         <form class="form-horizontal" id="user-form" action="#">
                             <div class="form-group">
-                                <label for="firt-name" class="col-sm-2 control-label">First Name</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="firt-name" placeholder="First Name">
+                                <label for="first-name" class="col-sm-4 control-label">First Name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="first-name" placeholder="First Name">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="last-name" class="col-sm-2 control-label">Last Name</label>
-                                <div class="col-sm-10">
+                                <label for="last-name" class="col-sm-4 control-label">Last Name</label>
+                                <div class="col-sm-8">
                                     <input type="text" class="form-control" id="last-name" placeholder="Last Name">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="age" class="col-sm-2 control-label">Age</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="age" placeholder="Age">
+                                <label for="avatar" class="col-sm-4 control-label">Avatar</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="avatar" placeholder="https://bootdey.com/img/Content/avatar/avatar1.png">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="height" class="col-sm-2 control-label">Height</label>
-                                <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="height" placeholder="Height">
+                                <label for="occupation" class="col-sm-4 control-label">Occupation</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="occupation" placeholder="Occupation">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <label for="sex" class="col-sm-2 control-label">Sex</label>
-                                <div class="col-sm-10">
-                                    <select class="form-control"></select>
-                                </div>                                
+                                <label for="company-name" class="col-sm-4 control-label">Company Name</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="company-name" placeholder="Company Name">
+                                </div>
                             </div>
                             <div class="form-group">
-                                <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-default">Submit</button>
+                                <label for="address" class="col-sm-4 control-label">Address</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="address" placeholder="Address">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="city" class="col-sm-4 control-label">City</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="city" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="state" class="col-sm-4 control-label">State</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="state" placeholder="State">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="zipcode" class="col-sm-4 control-label">Zip code</label>
+                                <div class="col-sm-8">
+                                    <input type="text" class="form-control" id="zipcode" placeholder="97230">
+                                </div>
+                            </div>                            
+                            <div class="form-group">
+                                <div class="col-sm-offset-4 col-sm-8">
+                                    <button type="submit" id="submitPerson" class="btn btn-default">Submit</button>
                                 </div>
                             </div>
                         </form>
                     </div>
                 </div>
-                <div class="col-sm-4">
-                    <div class="list-group">
-                        <a href="#" class="list-group-item">
-                            <img class="media-object" src="https://bootdey.com/img/Content/avatar/avatar1.png" width='64' height='64' alt="No one img"> 
-                            <span class="full-name">John Smith</span>
-                            <i class="glyphicon glyphicon-pencil"></i> 
-                            <i class="glyphicon glyphicon-remove"></i>
-                        </a>    
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="contact-box center-version">
-                        <a href="#profile.html">
-                            <img alt="image" width='64' height="64" class="img-circle" src="https://bootdey.com/img/Content/avatar/avatar1.png">
-                            <h3 class="m-b-xs"><strong>John Smith</strong></h3>
-                
-                            <div class="font-bold">Graphics designer</div>
-                            <address class="m-t-md">
-                                <strong>Twitter, Inc.</strong><br>
-                                795 Folsom Ave, Suite 600<br>
-                                San Francisco, CA 94107<br>
-                                <abbr title="Phone">P:</abbr> (123) 456-7890
-                            </address>
-                
-                        </a>
-                        <div class="contact-box-footer">
-                            <div class="m-t-xs btn-group">
-                                <a class="btn btn-xs btn-white"><i class="fa fa-phone"></i> Call </a>
-                                <a class="btn btn-xs btn-white"><i class="fa fa-envelope"></i> Email</a>
-                                <a class="btn btn-xs btn-white"><i class="fa fa-user-plus"></i> Follow</a>
-                            </div>
-                        </div>
-                    
-                    </div>
+                <div class="col-sm-6">
+                    <h3>Users</h3>                    
+                    <div id="personlist"></div>
                 </div>
             </div> 
         </div>      
@@ -113,6 +106,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/person.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
