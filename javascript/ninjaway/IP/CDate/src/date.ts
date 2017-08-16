@@ -63,14 +63,17 @@ export class CDate {
 
 // END - Getters & Setters -
 
+    /** Return a day of a Week ex: 'Monday' */
     getWeekDay(): string {
         return Weekdays[this.weekDay];
     }    
 
+    /** Return a month of a Year ex: 'March' */
     getMonth(): string {
         return Yearmonths[this.month];
     }
 
+    
     IncrementDay(): void {
         
         let currentWeekDay = this.weekDay;
