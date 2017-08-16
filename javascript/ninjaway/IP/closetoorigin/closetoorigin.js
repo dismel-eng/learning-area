@@ -14,6 +14,7 @@ function Point(x, y){
     }    
 }
 
+/** Return the distance from the origin of a Point */
 function DistanceFromOrigin(point){
    
    let distance;
@@ -27,6 +28,9 @@ function DistanceFromOrigin(point){
    return distance;
 }
 
+/** Given two points, print the closest one to the origin.
+ *  If both have the same distance then print both.
+ */
 function CloseToOrigin(point1, point2) {
         
     let distance_point1 = DistanceFromOrigin(point1);
