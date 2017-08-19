@@ -5,8 +5,8 @@ var App = (function () {
     function App() {
     }
     App.main = function () {
-        var mnumber = new mdate.CNumber(8);
-        console.log(mnumber.Factorial());
+        var mnumber = new mdate.CNumber(673);
+        console.log(mnumber.IsPrime());
     };
     return App;
 }());

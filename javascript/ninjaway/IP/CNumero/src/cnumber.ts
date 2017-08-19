@@ -43,6 +43,7 @@ export class CNumber {
 
     
     Factorial():number{
+
         let num = this._num;
         let factorial = this._num;
 
@@ -56,5 +57,87 @@ export class CNumber {
         }
 
         return factorial;
+    }
+
+    /** Return a Sum of first n numbers */
+    Sum():number{
+        let n = this._num;        
+        return n * (n+1)/2;
+    }
+
+    /** Times */
+    Times(x:number):number{
+
+        return 0;
+    }
+
+    /** Exponent */
+    Pow(x:number):number{
+        
+        let n = this._num;
+        let exp = 1;        
+        let count = 0;
+        
+        if(x === 0)
+            return 1;
+
+        if(x === 1){
+            return n;
+        }else{                       
+            count = x;
+            exp = n;
+
+            while (count > 1) {
+
+                exp *= n;
+                count--;
+
+            }
+        }
+
+        return (x < 0) ? 1 / exp : exp;
+    }
+
+    /** Calculate the square of the number by making only sums. 
+     * Note: The square of a N number is the sum of the n first odd numbers.
+     * Ex: 3^2 = 1 + 3 + 5 = 9
+     */
+    SquareSum(): number{
+        
+        let n = this._num;
+        let count = 1;
+        let sum = 0;
+
+        // n^2 == n * n 
+        while (n * n !== sum) {
+            
+            if(count % 2 !== 0)
+                sum += count;
+            count++;
+        }        
+        return sum;
+    }
+
+    /** The following is a simple prime check algorithm for not very large numbers. */
+    IsPrime():boolean{
+        let n = this._num;
+        let i = 5;
+        
+        if(n <= 1)
+            return false;
+        if(n <= 3)
+            return true;        
+        if(n % 2 === 0 || n % 3 === 0)
+            return false;
+
+        while (i * i <= n) {
+            
+            if(n % i === 0 || n % (i + 2) === 0)
+                return false;
+            
+            i = i + 6;            
+        }
+
+        return true;
     }
 }

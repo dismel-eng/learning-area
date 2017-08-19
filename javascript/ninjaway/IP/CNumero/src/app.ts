@@ -3,9 +3,9 @@ import * as mdate from "./cnumber";
 class App {
     
     public static main():void{
-        let mnumber = new mdate.CNumber(8);
+        let mnumber = new mdate.CNumber(673);
         
-        console.log(mnumber.Factorial());
+        console.log(mnumber.IsPrime());
         
     }
 }
