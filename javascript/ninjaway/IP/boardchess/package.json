@@ -1,0 +1,14 @@
+{
+  "name": "boardchess",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "dev": "node ./dist/js/app.js",
+    "start": "npm run build & npm run dev"
+  },
+  "author": "",
+  "license": "ISC"
+}
