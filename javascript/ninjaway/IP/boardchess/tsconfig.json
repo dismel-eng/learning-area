@@ -11,6 +11,7 @@
     "strict": true                            /* Enable all strict type-checking options. */    
   },
   "files": [
-      "./src/app.ts"    
+      "./src/app.ts",
+      "./src/board.ts"    
   ]
 }
