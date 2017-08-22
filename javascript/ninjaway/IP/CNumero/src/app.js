@@ -1,12 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var mdate = require("./cnumber");
+var mnumber = require("./cnumber");
 var App = (function () {
     function App() {
     }
     App.main = function () {
-        var mnumber = new mdate.CNumber(673);
-        console.log(mnumber.IsPrime());
+        var m_number = new mnumber.CNumber(5);
+        console.log(m_number.Serie());
     };
     return App;
 }());

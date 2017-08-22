@@ -107,6 +107,18 @@ var CNumber = (function () {
         }
         return true;
     };
+    /** Calculate the sum of the following serie 1*2*3+2*3*4+3*4*5+....+ given T
+     *  Note: if T=4 the sum will be 1*2*3+2*3*4+3*4*5+4*5*6;
+     */
+    CNumber.prototype.Serie = function () {
+        var result = 0;
+        var count = 1;
+        while (count <= this._num) {
+            result += count * (count + 1) * (count + 2);
+            count++;
+        }
+        return result;
+    };
     return CNumber;
 }());
 exports.CNumber = CNumber;
