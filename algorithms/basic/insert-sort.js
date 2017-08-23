@@ -1,6 +1,9 @@
 /** INSERTION SORT
  *  Input: A sequence of N unordered numbers A[n1,n2,n3,...nX]
  *  Output: A permutation (reordering) of the input sequence such that: n1 <= n2 <= n3 <= ... <= nX
+ *  
+ *  NOTE: We start with insertion sort, which is an efficient algorithm for sorting a small
+ *  number of elements.
  * 
  *  Seudo Code: 
  *  Parameter: an array A = [5,2,4,6,1,3] 
@@ -10,8 +13,9 @@
  *      j = i - 1
  *      while j > -1 && A[j] > key
  *          A[j+1] = A[j]
- *          j = j - 1
+ *          j--
  *      A[j+1] = key
+ *  
  */
 
  /** JAVASCRIPT IMPLEMENTATION */
