@@ -120,8 +120,73 @@ export class Draftsman {
     }
 
     Triangle():void{
-       console.log('falta');
-       
+        let start = ' * ';
+        let space = '   ';
+        let row = '';
+        let mid = Math.ceil(this.Dimension / 2);
+        
+
+        
+
+        for (var i = 1; i <= this.Dimension; i++) {
+            if(i % 2 === 0)
+                continue;
+            row = '';
+            for (var j = 1; j <= this.Dimension; j++) {
+                
+                if(i === this.Dimension){
+                    // Print i, j, dimension
+                    //console.log('i: '+`${i}`+' - '+' j: '+`${j}`+' - '+' type: '+`${start}`);
+                    row += start;
+                    
+                }else{
+                    
+                    let x = Math.floor((this.Dimension - i) / 2);
+                    let y = this.Dimension - Math.floor(x) + 1;
+
+                    if (i === 1) {
+                        row += (j === mid ) ? start : space;                            
+                    }else if(j > x && j < y){
+                        row += start;
+                    }else
+                        row += space;                                               
+                }                   
+                                
+            }
+            console.log(row);                          
+        }       
+    }
+
+    Diamond():void{
+        let start = ' * ';
+        let space = '   ';
+        let row = '';
+        let mid = Math.ceil(this.Dimension / 2);
+        let x = 1;
+        let y = 1;
+
+        for (var i = 1; i <= this.Dimension; i++) {
+            row = '';
+                        
+            for (var j = 1; j <= this.Dimension; j++) {
+                
+                let x = (i < mid) ? mid - i : i - mid;
+                let y = (i < mid) ? mid + (i - 1) : this.Dimension - (i - mid);              
+               
+                if (i === 1 || i === this.Dimension) {
+                    row += (j === mid ) ? start : space;                            
+                }else if(i === mid){
+                    row += start;
+                }else if(j > x && j <= y){
+                    row += start;
+                }else
+                    row += space;                              
+            }
+            
+            console.log(row);
+            
+        }
+        
     }
     
 }

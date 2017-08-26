@@ -99,6 +99,63 @@ var Draftsman = (function () {
             console.log(row);
         }
     };
+    Draftsman.prototype.Triangle = function () {
+        var start = ' * ';
+        var space = '   ';
+        var row = '';
+        var mid = Math.ceil(this.Dimension / 2);
+        for (var i = 1; i <= this.Dimension; i++) {
+            if (i % 2 === 0)
+                continue;
+            row = '';
+            for (var j = 1; j <= this.Dimension; j++) {
+                if (i === this.Dimension) {
+                    row += start;
+                }
+                else {
+                    var x = Math.floor((this.Dimension - i) / 2);
+                    var y = this.Dimension - Math.floor(x) + 1;
+                    if (i === 1) {
+                        row += (j === mid) ? start : space;
+                    }
+                    else if (j > x && j < y) {
+                        row += start;
+                    }
+                    else
+                        row += space;
+                }
+            }
+            console.log(row);
+        }
+    };
+    Draftsman.prototype.Diamond = function () {
+        var start = ' * ';
+        var space = '   ';
+        var row = '';
+        var mid = Math.ceil(this.Dimension / 2);
+        var ctr = 1;
+        var x = 1;
+        var y = 1;
+        for (var i = 1; i <= this.Dimension; i++) {
+            row = '';
+            for (var j = 1; j <= this.Dimension; j++) {
+                var x_1 = (i < mid) ? mid - i : i - mid;
+                var y_1 = (i < mid) ? mid + (i - 1) : this.Dimension - (i - mid);
+                if (i === 1 || i === this.Dimension) {
+                    row += (j === mid) ? start : space;
+                }
+                else if (i === mid) {
+                    row += start;
+                }
+                else if (j > x_1 && j <= y_1) {
+                    row += start;
+                }
+                else
+                    row += space;
+            }
+            console.log(row);
+        }
+    };
     return Draftsman;
 }());
 exports.Draftsman = Draftsman;

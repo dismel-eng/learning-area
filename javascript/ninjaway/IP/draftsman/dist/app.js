@@ -5,8 +5,8 @@ var App = (function () {
     function App() {
     }
     App.main = function () {
-        var m_draftsman = new draftsman.Draftsman(5);
-        m_draftsman.ZigZag();
+        var m_draftsman = new draftsman.Draftsman(21);
+        m_draftsman.Diamond();
     };
     return App;
 }());
